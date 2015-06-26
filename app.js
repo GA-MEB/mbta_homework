@@ -65,6 +65,11 @@ var tester = function() {
   console.log('* should return 3, actually returns ' + sameLineDistance(orange, "State", "North Station"));
   console.log('* should return 1, actually returns ' + sameLineDistance(green, "Arlington", "Copley"));
   console.log('* should return 5, actually returns ' + sameLineDistance(green, "Copley", "Haymarket"));
+  console.log('distance');
+  console.log('* should return 2, actually returns ' + distance(red, "Kendall", red, "Harvard"));
+  console.log('* should return 5, actually returns ' + distance(green, "Arlington", red, "Harvard"));
+  console.log('* should return 3, actually returns ' + distance(green, "Copley", orange, "Park Street"));
+  console.log('* should return 3, actually returns ' + distance(green, "Copley", green, "Park Street"));
+  console.log('* should return 3, actually returns ' + distance(green, "Copley", red, "Park Street"));
 }
-
 tester();
