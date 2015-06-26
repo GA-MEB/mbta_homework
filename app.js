@@ -53,6 +53,14 @@ var sameLineDistance = function(line, firstStop, secondStop){
   // return (diff > 0)? diff : -diff;
 };
 
+var distance = function(firstLine, firstStop, secondLine, secondStop){
+  if (firstLine === secondLine) {   // Same-line case
+    return sameLineDistance(firstLine, firstStop, secondStop);
+  } else {   //different-lines case
+    return  sameLineDistance(firstLine, firstStop, "Park Street") +
+            sameLineDistance(secondLine, "Park Street", secondStop);
+  }
+};
 
 var tester = function() {
   console.log('find');
