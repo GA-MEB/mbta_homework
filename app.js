@@ -40,3 +40,11 @@ var find = function(array, value){
   }
   return -1;
 };
+
+var tester = function() {
+  console.log('find')
+  console.log("* should return 2, actually returns " + find(['a','b','c'], 'c'));
+  console.log("* should return -1, actually returns " + find(['a','b','c'], 'z'));
+}
+
+tester();
